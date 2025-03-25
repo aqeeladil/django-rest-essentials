@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404
-from .serializers import ProductSerializer, OrderSerializer, ProductInfoSerializer
+from .serializers import ProductSerializer, OrderSerializer, ProductInfoSerializer, OrderCreateSerializer, UserSerializer
 from django.db.models import Max
-from .models import Product, Order, OrderItem
+from .models import Product, Order, OrderItem, User
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, action
 from rest_framework import generics, filters, viewsets
@@ -121,6 +121,15 @@ class OrderViewSet(viewsets.ModelViewSet):
     #     serializer = self.get_serializer(orders, many=True)
     #     return Response(serializer.data)
 
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def get_serializer_class(self):
+        # can also check if POST: if self.request.method == 'POST'
+        if self.action == 'create' or self.action == 'update':
+            return OrderCreateSerializer
+        return super().get_serializer_class()
+
     def get_queryset(self):
         qs = super().get_queryset()
         if not self.request.user.is_staff:
@@ -149,7 +158,10 @@ class ProductInfoAPIView(APIView):
         return Response(serializer.data)
 
 
-
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    pagination_class = None
 
 
 
