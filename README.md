@@ -38,11 +38,19 @@ python manage.py test
 
 # REST Client (vs-code extension for sending http requests)
 # REST Client allows you to send HTTP request and view the response in Visual Studio Code directly.
+```
 
+```bash
 # API Documentation
 # drf-spectacular is an OpenAPI 3 schema generation library with explicit focus on extensibility, customizability and client generation.
 # pip install drf-spectacular
 python manage.py spectacular --color --file schema.yml
+```
+
+```bash
+# Filtering
+# Django-filter is a reusable Django application allowing users to declaratively add dynamic QuerySet filtering from URL parameters.
+# pip install django-filter
 ```
 
 

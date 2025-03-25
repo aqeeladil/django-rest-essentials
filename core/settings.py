@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',      # new
     'silk',                 # new
     'drf_spectacular',      # new
+    'django_filters',       # new
 ]
 
 MIDDLEWARE = [
@@ -136,7 +137,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 2,
 }
+
 
 # new
 SPECTACULAR_SETTINGS = {
