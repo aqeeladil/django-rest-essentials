@@ -4,7 +4,7 @@
 ```bash
 python -m venv myenv
 source myenv/Scripts/activate
-pip install -r requirements.txt # OR (pip install django djangorestframework django-extensions pillow django-silk)
+pip install -r requirements.txt # OR (pip install django djangorestframework django-extensions pillow django-silk djangorestframework-simplejwt)
 pip freeze > requirements.txt 
 django-admin startproject core .
 python manage.py startapp api
@@ -18,8 +18,9 @@ python manage.py createsuperuser
 python manage.py populate_db
 ```
 
-**OPTIONAL**
 ```bash
+# Optional
+
 # Django Graph Models command - Generate ER Diagrams for your Database
 # pip install django-extensions
 python manage.py graph_models api > models.dot      
@@ -38,7 +39,6 @@ python manage.py test
 
 # REST Client (vs-code extension for sending http requests
 # REST Client allows you to send HTTP request and view the response in Visual Studio Code directly.
-
 ```
 
 
