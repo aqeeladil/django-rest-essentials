@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django_extensions',   # new
     'api',                 # new
     'rest_framework',      # new
-    'silk'                 # new
+    'silk',                 # new
+    'drf_spectacular',      # new
 ]
 
 MIDDLEWARE = [
@@ -129,10 +130,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'api.User'      # new
 
 # new 
-# JWT Authentication
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# new
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'E-Commerce API',
+    'DESCRIPTION': 'A simple Product & Order API',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }

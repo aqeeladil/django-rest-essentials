@@ -35,15 +35,29 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
     
 
 
+
 # @api_view(['GET'])
 # def product_detail(request, pk):
 #     product = get_object_or_404(Product, pk=pk)
 #     serializer = ProductSerializer(product)
 #     return Response(serializer.data)
-class ProductDetailAPIView(generics.RetrieveAPIView):
+
+# class ProductDetailAPIView(generics.RetrieveAPIView):
+#     queryset = Product.objects.all()
+#     serializer_class = ProductSerializer
+#     lookup_url_kwarg = 'product_id'
+
+class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_url_kwarg = 'product_id'
+
+    def get_permissions(self):
+        self.permission_classes = [AllowAny]
+        if self.request.method in ['PUT', 'PATCH', 'DELETE']:
+            self.permission_classes = [IsAdminUser]
+        return super().get_permissions()    
+
 
 
 
@@ -52,6 +66,7 @@ class ProductDetailAPIView(generics.RetrieveAPIView):
 #     orders = Order.objects.prefetch_related('items__product')
 #     serializer = OrderSerializer(orders, many=True)
 #     return Response(serializer.data)
+
 class OrderListAPIView(generics.ListAPIView):
     queryset = Order.objects.prefetch_related('items__product')
     serializer_class = OrderSerializer
@@ -78,6 +93,7 @@ class UserOrderListAPIView(generics.ListAPIView):
 #         'max_price': products.aggregate(max_price=Max('price'))['max_price']
 #     })
 #     return Response(serializer.data)
+
 class ProductInfoAPIView(APIView):
     def get(self, request):
         products = Product.objects.all()

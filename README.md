@@ -1,10 +1,9 @@
 # Django-Rest-Framework
 
-
 ```bash
 python -m venv myenv
 source myenv/Scripts/activate
-pip install -r requirements.txt # OR (pip install django djangorestframework django-extensions pillow django-silk djangorestframework-simplejwt)
+pip install -r requirements.txt # OR (pip install django djangorestframework django-extensions pillow django-silk djangorestframework-simplejwt drf-spectacular)
 pip freeze > requirements.txt 
 django-admin startproject core .
 python manage.py startapp api
@@ -37,8 +36,13 @@ python manage.py runserver
 
 python manage.py test
 
-# REST Client (vs-code extension for sending http requests
+# REST Client (vs-code extension for sending http requests)
 # REST Client allows you to send HTTP request and view the response in Visual Studio Code directly.
+
+# API Documentation
+# drf-spectacular is an OpenAPI 3 schema generation library with explicit focus on extensibility, customizability and client generation.
+# pip install drf-spectacular
+python manage.py spectacular --color --file schema.yml
 ```
 
 
