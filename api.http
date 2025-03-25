@@ -46,3 +46,12 @@ Content-Type: application/json
 {
 	"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyODQwOTAzMSwiaWF0IjoxNzI4MzIyNjMxLCJqdGkiOiI3ZjdmZDExNDhjZTg0Njk5YTdiYmY2OWZlNmRiMzczYSIsInVzZXJfaWQiOjF9.KRzvCrbOC_XbxFqjGWf9iTf4lhlnWAdddfCjp7dPrFM"
 }
+
+
+###
+GET http://localhost:8000/orders/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNjYxODgyLCJpYXQiOjE3MzM2NjE1ODIsImp0aSI6ImNiNDEwNzVhYzgyNjQ5NDA5NDNmMWM5ODFlNTBjMzc0IiwidXNlcl9pZCI6Mn0.VrzNai7WmnYC7nbaEM1CcqDIyhPIQIKNHSuAiRdDmvE
+
+###
+GET http://localhost:8000/orders/8f1e83a6-8f36-442e-8c1c-09dd1ae20484/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNjYyMjE2LCJpYXQiOjE3MzM2NjE5MTYsImp0aSI6ImViOTFmODI4ZDFlMjRjMGI4Y2I0OTlhYmYyNDViMmYwIiwidXNlcl9pZCI6Mn0.ixKbx2Gocm3B-KDirqWlq1MVizCr6FGI-AJ3Ty4Roqo
