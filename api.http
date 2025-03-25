@@ -19,6 +19,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 }
 
 ###
+
 POST http://localhost:8000/products/ HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI4MzIxOTM0LCJpYXQiOjE3MjgzMjE2MzQsImp0aSI6ImJhNjAwMDBiMTU3MzRkM2ZhMWZlN2VlNWY4ZDQ5NzE5IiwidXNlcl9pZCI6MX0.oytJ-fpp0gf4STT7qoGNBFHrGVHyexLYW2ZqGPL1gxU
@@ -47,15 +48,13 @@ Content-Type: application/json
 	"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyODQwOTAzMSwiaWF0IjoxNzI4MzIyNjMxLCJqdGkiOiI3ZjdmZDExNDhjZTg0Njk5YTdiYmY2OWZlNmRiMzczYSIsInVzZXJfaWQiOjF9.KRzvCrbOC_XbxFqjGWf9iTf4lhlnWAdddfCjp7dPrFM"
 }
 
-
 ###
 GET http://localhost:8000/orders/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNjYxODgyLCJpYXQiOjE3MzM2NjE1ODIsImp0aSI6ImNiNDEwNzVhYzgyNjQ5NDA5NDNmMWM5ODFlNTBjMzc0IiwidXNlcl9pZCI6Mn0.VrzNai7WmnYC7nbaEM1CcqDIyhPIQIKNHSuAiRdDmvE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2NzA3NTkxLCJpYXQiOjE3MzY3MDM5OTEsImp0aSI6ImVkNTRhNmNiNTAyMzQzMzNiZDg0YzUxMjVlZTliMzBlIiwidXNlcl9pZCI6MX0.7SbBuq6SE3iGTmfdrggct3pDoqyJqLskTA1bvxtuyww
 
 ###
 GET http://localhost:8000/orders/8f1e83a6-8f36-442e-8c1c-09dd1ae20484/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzNjYyMjE2LCJpYXQiOjE3MzM2NjE5MTYsImp0aSI6ImViOTFmODI4ZDFlMjRjMGI4Y2I0OTlhYmYyNDViMmYwIiwidXNlcl9pZCI6Mn0.ixKbx2Gocm3B-KDirqWlq1MVizCr6FGI-AJ3Ty4Roqo
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM1ODE4Nzg0LCJpYXQiOjE3MzU4MTg0ODQsImp0aSI6ImQ3NTUxYTQwNTEwNzQzNmNhMmQ2MGI5MTQ3ODgxNzUyIiwidXNlcl9pZCI6MX0.xXq00vT5yCF8i3ylTTbuTJuUdLNpnAX01imPSvRZqFw
 
 ###
 POST http://localhost:8000/orders/ HTTP/1.1
@@ -75,7 +74,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 		}
 	]	
 }
-
 
 ###
 GET http://localhost:8000/orders/90ea8fec-36ab-486e-8f0a-f40eb32032ff/ HTTP/1.1

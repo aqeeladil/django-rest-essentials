@@ -1,5 +1,23 @@
 # Django-Rest-Framework
 
+**Topics Covered:**
+- Models
+- Serializers
+- django-silk for Profiling and Optimization
+- Views
+- Filtering
+- Permissions
+- APIView class
+- VSCode REST Client extension
+- JWT Authentication with djangorestframework-simplejwt
+- API Documentation
+- API Pagination
+- Viewsets & Routers 
+- Caching with Redis
+- API Throttling 
+- Testing APIs 
+
+### Implementation Commands
 ```bash
 python -m venv myenv
 source myenv/Scripts/activate
